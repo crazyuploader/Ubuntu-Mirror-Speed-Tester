@@ -17,7 +17,7 @@ To run the script, use the following command:
 python3 main.py
 ```
 
-By default, the script retrieves the mirrors list from `http://mirrors.ubuntu.com/mirrors.txt` and downloads the file `dists/jammy/Contents-amd64.gz` from each mirror. You can customize these settings by modifying the script.
+By default, the script retrieves the mirrors list from [`http://mirrors.ubuntu.com/mirrors.txt`](http://mirrors.ubuntu.com/mirrors.txt) and downloads the file `dists/jammy/Contents-amd64.gz` from each mirror. You can customize these settings by modifying the script.
 
 ## Output
 
