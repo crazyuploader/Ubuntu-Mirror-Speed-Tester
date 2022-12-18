@@ -1,4 +1,4 @@
-Hostname, Full URL, Download Speed in bytes, Download Speed with unit, Average Latency, Average Latency with unit, Packet Loss percentage, Packet Loss with %
+Hostname, Full URL, Download Speed (Bytes), Download Speed, Average Latency, Average Latency with unit, Packet Loss percentage, Packet Loss with %
 
 in.mirror.coganng.com, https://in.mirror.coganng.com/ubuntu/dists/jammy/Contents-amd64.gz, 13761146, 13.1MiB, 32.106, 32.106 ms, 0.0, 0.0%
 repos.del.extreme-ix.org, http://repos.del.extreme-ix.org/ubuntu/dists/jammy/Contents-amd64.gz, 14233229, 13.6MiB, 9.043, 9.043 ms, 0.0, 0.0%
