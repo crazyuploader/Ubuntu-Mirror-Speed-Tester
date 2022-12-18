@@ -31,4 +31,4 @@ The script prints the following information for each mirror:
 Feel free to fork the repository and submit pull requests with any improvements or modifications to the script.
 
 ## License
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License - see the **[LICENSE](LICENSE)** file for details.
