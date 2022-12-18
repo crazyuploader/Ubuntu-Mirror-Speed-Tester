@@ -1,6 +1,6 @@
 # Ubuntu Mirror Speed Tester
 
-This script retrieves a list of mirrors from a specified URL, pings each mirror to measure its average latency and packet loss, and then uses `curl` to download a file from each mirror and measure its download speed. The results are printed to the console in a table format.
+This script retrieves a list of mirrors from a specified URL, pings each mirror to measure its average latency and packet loss, and then uses `requests` library to download a file from each mirror and measure its download speed. The results are printed to the console in a table format.
 
 ## Requirements
 
