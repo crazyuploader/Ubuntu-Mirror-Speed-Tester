@@ -6,6 +6,7 @@ import csv
 import shlex
 import subprocess
 import sys
+import time
 from urllib.parse import urlparse
 try:
     import requests
@@ -21,16 +22,30 @@ HEADER = ["Hostname", "Full URL",
           "Average Latency (ms)", "Packet Loss (%)", "Download Speed (Bytes)", "Download Speed"]
 
 
-# Function to write CSV
-def write_to_csv(results, filename, header):
+# Function to get download speed
+def get_download_speed(url):
     """
-    Function to write CSV
+    Function to return download speed for a given URL.
     """
-    with open(filename, "w", newline="", encoding="utf-8") as csvfile:
-        writer = csv.writer(csvfile)
-        writer.writerow(header)
-        for result in results:
-            writer.writerow(result)
+    # Try to run the HTTP request and download the file
+    try:
+        data = requests.get(url, stream=True, timeout=10)
+        if response.status_code != 200:
+            print(
+                f"Received HTTP status code {response.status_code} while fetching the file")
+            return 0
+        total_size = int(data.headers.get("Content-Length", 0))
+        downloaded_size = 0
+        start_time = time.time()
+        with open("/dev/null", "wb") as download_file:
+            for data in data.iter_content(1024):
+                downloaded_size += len(data)
+                download_file.write(data)
+        elapsed_time = time.time() - start_time
+        return total_size // elapsed_time
+    except requests.exceptions.RequestException:
+        print("An error occurred while getting the file from:", full_url)
+        return 0
 
 
 # Function to return human readable size from bytes
@@ -43,6 +58,18 @@ def sizeof_fmt(num, suffix="B/s"):
             return f"{num:3.1f} {unit}{suffix}"
         num /= 1024.0
     return f"{num:.1f}Yi{suffix}"
+
+
+# Function to write CSV
+def write_to_csv(results, filename, header):
+    """
+    Function to write CSV
+    """
+    with open(filename, "w", newline="", encoding="utf-8") as csvfile:
+        writer = csv.writer(csvfile)
+        writer.writerow(header)
+        for result in results:
+            writer.writerow(result)
 
 
 # Try to retrieve the mirrors list from the specified URL
@@ -66,16 +93,9 @@ mirror_results = []
 for mirror in mirrors:
     hostname = urlparse(mirror).hostname
     full_url = mirror + "dists/jammy/Contents-amd64.gz"
-    command = "curl -qfsLS -w '%{speed_download}' -o /dev/null --url" + " " + full_url
-    curl_command = shlex.split(command)
     ping_command = shlex.split(f"ping -c 3 {hostname}")
-    try:
-        # Try to run the curl command and capture the output
-        curl_speed_in_bytes = subprocess.run(
-            curl_command, capture_output=True, check=True).stdout.decode("utf-8")
-    except subprocess.CalledProcessError:
-        print(
-            f"An error occurred while running the curl command on mirror {hostname}")
+    download_speed = get_download_speed(full_url)
+    if download_speed == 0:
         continue
     ICMP_CHECK = False
     try:
@@ -93,7 +113,7 @@ for mirror in mirrors:
         AVERAGE_PING = "na"
         PACKET_LOSS = "na"
     RESULT = [hostname, full_url, AVERAGE_PING, PACKET_LOSS,
-              curl_speed_in_bytes, sizeof_fmt(float(curl_speed_in_bytes))]
+              download_speed, sizeof_fmt(float(download_speed))]
     mirror_results.append(RESULT)
 
 
