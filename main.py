@@ -93,7 +93,7 @@ for mirror in mirrors:
         AVERAGE_PING = "na"
         PACKET_LOSS = "na"
     RESULT = [hostname, full_url, AVERAGE_PING, PACKET_LOSS,
-        curl_speed_in_bytes, sizeof_fmt(float(curl_speed_in_bytes))]
+              curl_speed_in_bytes, sizeof_fmt(float(curl_speed_in_bytes))]
     mirror_results.append(RESULT)
 
 
