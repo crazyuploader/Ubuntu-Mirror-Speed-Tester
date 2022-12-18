@@ -3,12 +3,16 @@
 
 
 import csv
+import shlex
+import subprocess
 import sys
 from urllib.parse import urlparse
-import subprocess
-import shlex
-import requests
-import jc
+try:
+    import requests
+    import jc
+except ImportError:
+    print("Please run: pipenv install")
+    sys.exit(1)
 
 
 # Function to write CSV
