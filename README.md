@@ -26,3 +26,9 @@ The script prints the following information for each mirror:
 * Packet Loss (%): the percentage of pings that were lost
 * Download Speed (Bytes): the download speed of the file, in bytes per second
 * Download Speed: the download speed of the file, formatted in a human-readable format (e.g. "1.2 MiB/s")
+
+## Contributions
+Feel free to fork the repository and submit pull requests with any improvements or modifications to the script.
+
+## License
+This project is licensed under the MIT License - see the LICENSE file for details.
