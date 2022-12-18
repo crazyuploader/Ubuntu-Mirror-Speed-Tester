@@ -54,7 +54,7 @@ try:
         print("Getting mirrors list failed")
         sys.exit(1)
     mirrors = response.text.splitlines()
-    print("Received mirrors list successfully")
+    print("Received", len(mirrors), "Ubuntu Mirror Server(s)")
     print("")
 except requests.exceptions.RequestException as e:
     print("An error occurred while getting the mirrors list:")
@@ -101,3 +101,5 @@ if mirror_results:
     write_to_csv(mirror_results, "result.csv", HEADER)
     print("")
     print(tabulate(mirror_results, HEADER))
+else:
+    print("Script finished with errors...")
