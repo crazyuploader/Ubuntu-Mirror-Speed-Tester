@@ -7,6 +7,7 @@ This script retrieves a list of mirrors from a specified URL, pings each mirror 
 - Python 3
 - The `jc` library (install using `pip install jc`)
 - The `requests` library (install using `pip install requests`)
+- The `tabulate` library (install using `pip install tabulate`)
 
 ## Usage
 
