@@ -47,7 +47,7 @@ try:
     response = requests.get(MIRROR_URL, timeout=10)
     if response.status_code != 200:
         print("Getting mirrors list failed")
-        exit(1)
+        sys.exit(1)
     mirrors = response.text.splitlines()
     print("Received mirrors list successfully")
     print("")
