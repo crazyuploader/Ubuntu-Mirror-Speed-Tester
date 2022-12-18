@@ -1,9 +1,0 @@
-Hostname, Full URL, Download Speed (Bytes), Download Speed, Average Latency, Average Latency with unit, Packet Loss percentage, Packet Loss with %
-
-in.mirror.coganng.com, https://in.mirror.coganng.com/ubuntu/dists/jammy/Contents-amd64.gz, 13761146, 13.1MiB, 32.106, 32.106 ms, 0.0, 0.0%
-repos.del.extreme-ix.org, http://repos.del.extreme-ix.org/ubuntu/dists/jammy/Contents-amd64.gz, 14233229, 13.6MiB, 9.043, 9.043 ms, 0.0, 0.0%
-ubuntu.hbcse.tifr.res.in, http://ubuntu.hbcse.tifr.res.in/ubuntu/dists/jammy/Contents-amd64.gz, 13693843, 13.1MiB, 31.809, 31.809 ms, 0.0, 0.0%
-in.mirror.coganng.com, https://in.mirror.coganng.com/ubuntu-ports/dists/jammy/Contents-amd64.gz, 0, 0.0B, 31.174, 31.174 ms, 0.0, 0.0%
-mirrors.piconets.webwerks.in, http://mirrors.piconets.webwerks.in/ubuntu-mirror/ubuntu/dists/jammy/Contents-amd64.gz, 17956124, 17.1MiB, 35.218, 35.218 ms, 0.0, 0.0%
-repo.extreme-ix.org, https://repo.extreme-ix.org/ubuntu/dists/jammy/Contents-amd64.gz, 14940564, 14.2MiB, 9.092, 9.092 ms, 0.0, 0.0%
-ftp.iitm.ac.in, http://ftp.iitm.ac.in/ubuntu/dists/jammy/Contents-amd64.gz, 13641831, 13.0MiB, 49.157, 49.157 ms, 0.0, 0.0%
