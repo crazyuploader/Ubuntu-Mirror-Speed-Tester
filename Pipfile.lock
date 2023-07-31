@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "cf032cfe4377b91a12de06bf16297e7625be2d87b1c0c7c0627c80a73b995743"
+            "sha256": "c5d96e794640f8c7d83cb4e1d80e326d6d38743d8f38ff7b82311abc9b8804e5"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -21,7 +21,7 @@
                 "sha256:539cc1d13202e33ca466e88b2807e29f4c13049d6d87031a3c110744495cb082",
                 "sha256:92d6037539857d8206b8f6ae472e8b77db8058fec5937a1ef3f54304089edbb9"
             ],
-            "index": "pypi",
+            "markers": "python_version >= '3.6'",
             "version": "==2023.7.22"
         },
         "charset-normalizer": {
@@ -115,18 +115,18 @@
         },
         "jc": {
             "hashes": [
-                "sha256:88dd79e531780a7d58a45235aca99fc42e437946284852c1084e1eab3bbdbaaf",
-                "sha256:e91097121b8f5a553dbb948d1fcc46d220d9b62236d73016eb0d8dad3cd9dc36"
+                "sha256:86dc9a6521bffb786e7135b9280fec9959f8eb8ffa6133719d47ee337f76d4bf",
+                "sha256:c1e86e230cd3f890953868b3016e45dd3806b8f467e24954335d433644db4df8"
             ],
             "index": "pypi",
-            "version": "==1.23.3"
+            "version": "==1.23.4"
         },
         "pygments": {
             "hashes": [
                 "sha256:8ace4d3c1dd481894b2005f560ead0f9f19ee64fe983366be1a21e171d12775c",
                 "sha256:db2db3deb4b4179f399a09054b023b6a586b76499d36965813c71aa8ed7b5fd1"
             ],
-            "markers": "python_full_version >= '3.7.0'",
+            "markers": "python_version >= '3.7'",
             "version": "==2.15.1"
         },
         "requests": {
@@ -202,7 +202,7 @@
                 "sha256:8d22f86aae8ef5e410d4f539fde9ce6b2113a001bb4d189e0aed70642d602b11",
                 "sha256:de7df1803967d2c2a98e4b11bb7d6bd9210474c46e8a0401514e3a42a75ebde4"
             ],
-            "markers": "python_full_version >= '3.7.0'",
+            "markers": "python_version >= '3.7'",
             "version": "==2.0.4"
         },
         "xmltodict": {
