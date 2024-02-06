@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "c308f933d28db032d8d76b24b091a51dfdfe7aec8e30262bf326605c1712de07"
+            "sha256": "ccfb0042b67f40fb01ae00fa426fb5bfb9d1adb98fbbba781bba08377231ae04"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -18,11 +18,11 @@
     "default": {
         "certifi": {
             "hashes": [
-                "sha256:9b469f3a900bf28dc19b8cfbf8019bf47f7fdd1a65a1d4ffb98fc14166beb4d1",
-                "sha256:e036ab49d5b79556f99cfc2d9320b34cfbe5be05c5871b51de9329f0603b0474"
+                "sha256:0569859f95fc761b18b45ef421b1290a0f65f147e92a1e5eb3e635f9a5e4e66f",
+                "sha256:dc383c07b76109f368f6106eee2b593b04a011ea4d55f652c6ca24a754d1cdd1"
             ],
             "markers": "python_version >= '3.6'",
-            "version": "==2023.11.17"
+            "version": "==2024.2.2"
         },
         "charset-normalizer": {
             "hashes": [
@@ -130,12 +130,12 @@
         },
         "jc": {
             "hashes": [
-                "sha256:13af052923db3eabd3a8118048763f852c7be9773e81f00035e18402726de05b",
-                "sha256:23a362a3ebbf2a8bc6ef3924eb114db9c7736b0c40b3e9edbf8236a38e1a5b5a"
+                "sha256:54eeebc57ffcb9df7f0a956ce7742c562f6b18f652024b4e341e0c05ce1843ac",
+                "sha256:eba4aaaf5128f18a16121c0bcfc1b794fc80b665ee97f6a25da9c156559da54e"
             ],
             "index": "pypi",
             "markers": "python_version >= '3.6'",
-            "version": "==1.24.0"
+            "version": "==1.25.0"
         },
         "pygments": {
             "hashes": [
@@ -229,11 +229,11 @@
         },
         "urllib3": {
             "hashes": [
-                "sha256:55901e917a5896a349ff771be919f8bd99aff50b79fe58fec595eb37bbc56bb3",
-                "sha256:df7aa8afb0148fa78488e7899b2c59b5f4ffcfa82e6c54ccb9dd37c1d7b52d54"
+                "sha256:051d961ad0c62a94e50ecf1af379c3aba230c66c710493493560c0c223c49f20",
+                "sha256:ce3711610ddce217e6d113a2732fafad960a03fd0318c91faa79481e35c11224"
             ],
             "markers": "python_version >= '3.8'",
-            "version": "==2.1.0"
+            "version": "==2.2.0"
         },
         "xmltodict": {
             "hashes": [
