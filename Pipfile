@@ -4,7 +4,7 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-jc = "==1.25.2"
+jc = "==1.25.3"
 requests = "==2.32.3"
 tabulate = "==0.9.0"
 
