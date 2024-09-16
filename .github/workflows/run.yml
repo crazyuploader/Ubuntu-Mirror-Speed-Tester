@@ -19,7 +19,6 @@ jobs:
           python -m pip install --upgrade pip
           pip install pipenv
           pipenv install
-      - name: Analysing the code with pylint
+      - name: Run Program
         run: |
-          pipenv shell
-          ./main.py
+          pipenv run ./main.py
