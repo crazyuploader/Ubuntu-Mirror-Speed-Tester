@@ -222,11 +222,11 @@
         },
         "xmltodict": {
             "hashes": [
-                "sha256:8887783bf1faba1754fc45fdf3fe03fbb3629c811ae57f91c018aace4c58d4ed",
-                "sha256:c6d46b4e3413d1e4fc3e5016f0f1c7a5c10f8ce39efaa0cb099af986ecfc9a53"
+                "sha256:64316adb5e30ca21ad5cf391f4f0f6b34f673d96b79574f1db1e32b13b43ee34",
+                "sha256:f50eb9020d28c673b40bbe3f43458ee165f0267c67f8ad8df0d70d9a4f3ac824"
             ],
-            "markers": "python_version >= '3.6'",
-            "version": "==0.15.0"
+            "markers": "python_version >= '3.9'",
+            "version": "==1.0.0"
         }
     },
     "develop": {}
