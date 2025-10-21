@@ -68,8 +68,8 @@ def write_to_csv(results, filename, header):
     with open(filename, "w", newline="", encoding="utf-8") as csvfile:
         writer = csv.writer(csvfile)
         writer.writerow(header)
-        for result in results:
-            writer.writerow(result)
+        for each_result in results:
+            writer.writerow(each_result)
 
 
 # Try to retrieve the mirrors list from the specified URL
@@ -97,24 +97,24 @@ for mirror in mirrors:
     download_speed = get_download_speed(full_url)
     if download_speed == 0:
         continue
-    ICMP_CHECK = False
+    icmp_check = False
     try:
         # Try to ping the mirror and capture the output
         ping_output = subprocess.run(
             ping_command, capture_output=True, check=True).stdout.decode("utf-8")
-        ICMP_CHECK = True
+        icmp_check = True
     except subprocess.CalledProcessError:
         print(f"An error occurred while pinging mirror {hostname}")
-    if ICMP_CHECK is True:
+    if icmp_check is True:
         parsed_ping_output = jc.parse("ping", ping_output)
-        AVERAGE_PING = f'{parsed_ping_output["round_trip_ms_avg"]} ms'
-        PACKET_LOSS = f'{parsed_ping_output["packet_loss_percent"]}%'
+        average_ping = f'{parsed_ping_output["round_trip_ms_avg"]} ms'
+        packet_loss = f'{parsed_ping_output["packet_loss_percent"]}%'
     else:
-        AVERAGE_PING = "na"
-        PACKET_LOSS = "na"
-    RESULT = [hostname, full_url, AVERAGE_PING, PACKET_LOSS,
+        average_ping = "na"
+        packet_loss = "na"
+    result = [hostname, full_url, average_ping, packet_loss,
               download_speed, sizeof_fmt(float(download_speed))]
-    mirror_results.append(RESULT)
+    mirror_results.append(result)
 
 
 if mirror_results:
