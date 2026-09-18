@@ -9,7 +9,7 @@ requests = "==2.33.0"
 tabulate = "==0.10.0"
 
 [dev-packages]
-pylint = "==4.0.5"
+pylint = "==4.0.8"
 
 [requires]
 python_version = "3.14"
